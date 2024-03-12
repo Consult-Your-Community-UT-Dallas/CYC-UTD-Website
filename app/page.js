@@ -1,12 +1,11 @@
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import SocialProof from "@/components/SocialProof";
-import CallToAction from "@/components/CallToAction";
-import AlumniCompanies from "@/components/AlumniCompanies";
-import FAQ from "@/components/FAQ";
-import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Hero from "@/components/landing/Hero";
+import Services from "@/components/landing/Services";
+import SocialProof from "@/components/landing/SocialProof";
+import Testimonials from "@/components/landing/Testimonials";
+import AlumniCompanies from "@/components/landing/AlumniCompanies";
+import CallToAction from "@/components/landing/CallToAction";
+import FAQ from "@/components/landing/FAQ";
+import Contact from "@/components/landing/Contact";
 
 export default function Home() {
     return (
@@ -16,10 +15,9 @@ export default function Home() {
             <SocialProof />
             <Testimonials />
             <AlumniCompanies />
-            <CallToAction />
             <FAQ />
+            <CallToAction />
             <Contact />
-            <Footer />
         </div>
     );
 }

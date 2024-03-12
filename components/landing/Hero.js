@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { businessFormLink, consultantFormLink } from "../utils/FormLinks";
+import { businessFormLink, consultantFormLink } from "../../utils/FormLinks";
 
 function HeroButton({ href, buttonText }) {
     return (
@@ -17,14 +17,12 @@ function HeroButton({ href, buttonText }) {
 
 function Hero() {
     return (
-        <section className="bg-[url('/HeroImage.jpg')] bg-center bg-cover bg-opacity-40 pt-48 pb-24">
+        <section id="/#" className="bg-[url('/HeroImage.jpg')] bg-center bg-cover bg-opacity-40 pt-48 pb-24">
             <div className="max-w-screen-xl px-4 py-8 mx-auto flex flex-col md:items-center text-center text-white">
-                <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-none">
-                    Consult Your Community
-                </h1>
+                <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-none">Consult Your Community</h1>
                 <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
-                    Student-led UT Dallas organization that provides free consulting services to Dallas&apos;s small, minority-owned businesses
-                    and nonprofits. With social impact at the heart of what we do, our members become not just consultants, but community leaders.
+                    Student-led UT Dallas organization that provides free consulting services to Dallas&apos;s small, minority-owned businesses and nonprofits.
+                    With social impact at the heart of what we do, our members become not just consultants, but community leaders.
                 </p>
                 <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                     <HeroButton href={businessFormLink} buttonText="Work With Us" />
