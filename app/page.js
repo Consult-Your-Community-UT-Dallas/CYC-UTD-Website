@@ -5,6 +5,8 @@ import CallToAction from "@/components/CallToAction";
 import AlumniCompanies from "@/components/AlumniCompanies";
 import FAQ from "@/components/FAQ";
 import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -12,10 +14,12 @@ export default function Home() {
             <Hero />
             <Services />
             <SocialProof />
+            <Testimonials />
+            <AlumniCompanies />
             <CallToAction />
             <FAQ />
-            {/* <AlumniCompanies />
-            <Testimonials /> */}
+            <Contact />
+            <Footer />
         </div>
     );
 }
