@@ -45,11 +45,7 @@ function Navbar() {
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <a href="/#" className="flex items-center">
                         <Image src="/Logo.jpeg" width={32} height={32} alt="CYC UTD Logo" className="mr-3 h-8" />
-                        <span
-                            className="self-center text-xl font-semibold whitespace-nowrap text-gray-700 lg:hover:text-primary-700"
-                        >
-                            CYC UT Dallas
-                        </span>
+                        <span className="self-center text-xl font-semibold whitespace-nowrap text-gray-700 lg:hover:text-primary-700">CYC UT Dallas</span>
                     </a>
                     <button
                         data-collapse-toggle="mobile-menu-2"
