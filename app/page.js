@@ -9,7 +9,7 @@ import Contact from "@/components/landing/Contact";
 
 export default function Home() {
     return (
-        <div className="space-y-12">
+        <>
             <Hero />
             <Services />
             <SocialProof />
@@ -18,6 +18,6 @@ export default function Home() {
             <FAQ />
             <CallToAction />
             <Contact />
-        </div>
+        </>
     );
 }

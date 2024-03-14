@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { businessFormLink, consultantFormLink } from "../../utils/FormLinks";
-import { facebook, instagram, twitter, linkedin, github, email } from "@/utils/FooterLinks";
+import { businessFormLink, consultantFormLink } from "../../data/FormLinks";
+import { facebook, instagram, twitter, linkedin, github, email } from "@/data/FooterLinks";
 
 const footerLinks = [
     {
@@ -48,7 +48,7 @@ function FooterCard({ title, links }) {
             <ul className="text-gray-600">
                 {links.map((link, index) => (
                     <li key={index} className={index !== links.length - 1 ? "mb-4" : ""}>
-                        <a href={link.href} className="hover:underline">
+                        <a href={link.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
                             {link.title}
                         </a>
                     </li>
@@ -143,7 +143,7 @@ function Footer() {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center">
                         © {new Date().getFullYear()}{" "}
-                        <a href="https://flowbite.com" className="hover:underline">
+                        <a href="https://consultyourcommunity.org/" target="_blank" rel="noopener noreferrer" className="hover:underline">
                             Consult Your Community™
                         </a>
                         . All Rights Reserved.

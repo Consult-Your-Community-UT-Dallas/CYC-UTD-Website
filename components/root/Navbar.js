@@ -22,22 +22,22 @@ const links = [
     },
 ];
 
-function NavbarLink({ href, children }) {
-    return (
-        <li>
-            <a
-                // scroll={false}
-                href={href}
-                className="block py-2 pr-4 pl-3 text-gray-700 border-t border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0"
-            >
-                {children}
-            </a>
-        </li>
-    );
-}
-
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    function NavbarLink({ href, children }) {
+        return (
+            <li>
+                <a
+                    onClick={() => setIsMenuOpen(false)}
+                    href={href}
+                    className="block py-2 pr-4 pl-3 text-gray-700 border-t border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0"
+                >
+                    {children}
+                </a>
+            </li>
+        );
+    }
 
     return (
         <header>
@@ -73,7 +73,7 @@ function Navbar() {
                     <div className={`${isMenuOpen ? "" : "hidden"} justify-between items-center w-full lg:flex lg:w-auto lg:order-1`} id="mobile-menu-2">
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                             {links.map((link, index) => (
-                                <NavbarLink key={index} href={link.href} onClick={() => setIsMenuOpen(false)}>
+                                <NavbarLink key={index} href={link.href}>
                                     {link.title}
                                 </NavbarLink>
                             ))}
