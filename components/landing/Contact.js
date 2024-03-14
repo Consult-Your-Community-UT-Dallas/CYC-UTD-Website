@@ -1,8 +1,36 @@
 "use client";
 
-// TODO: Create a functional contact form component
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            const response = await fetch("/api/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: event.target.email.value,
+                    subject: event.target.subject.value,
+                    message: event.target.message.value,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to submit form");
+            }
+
+            toast.success("Message sent!", { position: "bottom-right" });
+        } catch (error) {
+            console.log(error);
+            toast.error("Feature under development", { position: "bottom-right" });
+        }
+    };
+
     return (
         <div id="contact" className="py-20 px-4 mx-auto max-w-screen-md">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contact Us</h2>
@@ -15,8 +43,7 @@ function Contact() {
                     utdallas@consultyourcommunity.org
                 </a>
             </p>
-            {/* TODO: Add form submission */}
-            <form action="#" className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">
                         Your email
@@ -58,6 +85,7 @@ function Contact() {
                 >
                     Send message
                 </button>
+                <ToastContainer />
             </form>
         </div>
     );

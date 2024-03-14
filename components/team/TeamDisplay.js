@@ -7,9 +7,8 @@ function Member({ name, position, linkedin, major, gradYear, email }) {
         <div className="text-center text-gray-500">
             <Image
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
-                //image name is firstnamelastname.jpeg
-                src={`/Team/${name.split(" ")[0].toLowerCase()}${name.split(" ")[1].toLowerCase()}.jpeg`}
-                alt={`${name} Avatar`}
+                src={`/Team/${name.split(" ")[0]}${name.split(" ")[1]}.jpeg`}
+                alt={`${name} Profile Picture`}
                 width={144}
                 height={144}
                 priority={false}
