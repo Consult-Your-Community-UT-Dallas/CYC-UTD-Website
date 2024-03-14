@@ -26,16 +26,16 @@ const footerLinks = [
         title: "Follow us",
         links: [
             {
-                title: "Facebook",
-                href: facebook,
+                title: "LinkedIn",
+                href: linkedin,
             },
             {
                 title: "Instagram",
                 href: instagram,
             },
             {
-                title: "LinkedIn",
-                href: linkedin,
+                title: "Facebook",
+                href: facebook,
             },
         ],
     },

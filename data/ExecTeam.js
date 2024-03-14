@@ -1,8 +1,7 @@
 export const execTeam = [
     {
         name: "John Doe",
-        title: "Consulting Director",
-        img: "/Testimonials/AnneChen.jpeg",
+        position: "Consulting Director",
         linkedin: "#",
         major: "Computer Science",
         gradYear: "2023",
@@ -10,8 +9,7 @@ export const execTeam = [
     },
     {
         name: "John Doe",
-        title: "Consulting Director",
-        img: "/Testimonials/AnneChen.jpeg",
+        position: "Consulting Director",
         linkedin: "#",
         major: "Computer Science",
         gradYear: "2023",
@@ -19,8 +17,7 @@ export const execTeam = [
     },
     {
         name: "John Doe",
-        title: "Consulting Director",
-        img: "/Testimonials/AnneChen.jpeg",
+        position: "Consulting Director",
         linkedin: "#",
         major: "Computer Science",
         gradYear: "2023",
@@ -28,8 +25,7 @@ export const execTeam = [
     },
     {
         name: "John Doe",
-        title: "Consulting Director",
-        img: "/Testimonials/AnneChen.jpeg",
+        position: "Consulting Director",
         linkedin: "#",
         major: "Computer Science",
         gradYear: "2023",
@@ -37,8 +33,7 @@ export const execTeam = [
     },
     {
         name: "John Doe",
-        title: "Consulting Director",
-        img: "/Testimonials/AnneChen.jpeg",
+        position: "Consulting Director",
         linkedin: "#",
         major: "Computer Science",
         gradYear: "2023",
@@ -46,8 +41,7 @@ export const execTeam = [
     },
     {
         name: "John Doe",
-        title: "Consulting Director",
-        img: "/Testimonials/AnneChen.jpeg",
+        position: "Consulting Director",
         linkedin: "#",
         major: "Computer Science",
         gradYear: "2023",
