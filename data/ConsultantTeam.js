@@ -58,7 +58,7 @@ export const consultantTeam = [
     {
         name: "Prajeethreddy Bhuma",
         linkedin: "https://www.linkedin.com/in/prajeethreddybhuma/",
-        major: "Computer Science",
+        major: "Finance",
         gradYear: "'27",
         email: "prajeethreddy.bhuma@consultyourcommunity.org",
     },

@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Consult Your Community Website
+
+Welcome to Consult Your Community, a student-led organization at UT Dallas dedicated to providing free consulting services to small, minority-owned businesses and nonprofits in the Dallas area. Our mission is to make a positive social impact by leveraging our skills and knowledge to support local communities.
+
+## Technology Stack
+
+- **Frontend:** Built with Next.js and Tailwind CSS. 
+- **Backend:** Python FastAPI is responsible for handling form submissions and sending emails.
 
 ## Getting Started
 
-First, run the development server:
+Make sure you have the following software installed on your machine:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   Node.js
+-   Python
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> [!NOTE]  
+> Make sure you have a Python environment set up for this repository. You can use `virtualenv` or `conda` to create a new environment.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository to your local machine:
+   ```
+   git clone https://github.com/Consult-Your-Community-UT-Dallas/CYC-UTD-Website
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Navigate to the project directory:
+   ```
+   cd Consult-Your-Community-UT-Dallas
+   ```
 
-## Learn More
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Start the development server:
+   ```
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The majority of the website's content can be found within the `/data` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Since the repository is under a GitHub organization and Vercel's enterprise plan is too costly, one of the members of the organization must deploy it manually using their account.
