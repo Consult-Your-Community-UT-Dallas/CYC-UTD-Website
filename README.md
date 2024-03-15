@@ -42,3 +42,5 @@ The majority of the website's content can be found within the `/data` directory.
 ## Deployment
 
 Since the repository is under a GitHub organization and Vercel's enterprise plan is too costly, one of the members of the organization must fork the repository and deploy it to Vercel using their Hobby plan.
+
+Currently, the person responsible for deploying the website is [Giridhar Nair](https://github.com/GiridharRNair)
