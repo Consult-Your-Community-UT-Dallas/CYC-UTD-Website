@@ -9,7 +9,7 @@ from sendgrid.helpers.mail import Mail
 app = FastAPI()
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-CONTACT_FORM_RECIPIENT = "giridhar.r.nair@gmail.com"
+CONTACT_FORM_RECIPIENT = "utdallas@consultyourcommunity.org"
 
 email_template = """
 You've received a new inquiry via our website's contact form. Below are the details:<br>

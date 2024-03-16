@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { businessFormLink, consultantFormLink } from "../../data/FormLinks";
 
 function HeroButton({ href, buttonText }) {
@@ -16,10 +17,15 @@ function HeroButton({ href, buttonText }) {
 }
 
 function Hero() {
+    // Hacky way to prevent serverless function from cold start
+    useEffect(() => {
+        fetch("/api/health");
+    }, []);
+
     return (
-        <section id="#" className="bg-[url('/HeroImage.jpg')] bg-center bg-cover bg-opacity-40 pt-36 pb-12">
+        <section id="#" className="bg-[url('/HeroImage.jpg')] bg-center bg-cover pt-28 pb-12 md:pt-44 md:pb-20">
             <div className="max-w-screen-xl px-4 py-8 mx-auto flex flex-col md:items-center text-center text-white">
-                <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-none">Consult Your Community</h1>
+                <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight">Consult Your Community</h1>
                 <p className="max-w-2xl mb-4 font-light md:text-lg lg:text-xl">
                     Student-led UT Dallas organization that provides free consulting services to Dallas&apos;s small, minority-owned businesses and nonprofits.
                 </p>
