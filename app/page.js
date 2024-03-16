@@ -8,6 +8,9 @@ import FAQ from "@/components/landing/FAQ";
 import Contact from "@/components/landing/Contact";
 
 export default function Home() {
+    // fetch health to wake up the api server from cold start
+    fetch("/api/health");
+
     return (
         <>
             <Hero />
