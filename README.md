@@ -39,6 +39,9 @@ Make sure you have the following software installed on your machine:
 
 The majority of the website's content can be found within the `/data` directory.
 
+> [!NOTE]  
+> Ask the project maintainers for API keys and other sensitive information. Look at the `.env.example` file for a list of environment variables that need to be set.
+
 ## Deployment
 
 Since the repository is under a GitHub organization and Vercel's enterprise plan is too costly, one of the members of the organization must fork the repository and deploy it to Vercel using their Hobby plan.

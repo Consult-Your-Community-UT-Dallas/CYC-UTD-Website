@@ -123,12 +123,12 @@ function SocialIcons({ href, children }) {
 
 function Footer() {
     return (
-        <footer className="p-4 bg-white sm:p-6">
+        <footer className="p-4 sm:p-6">
             <div className="mx-auto max-w-screen-xl">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <div className="flex items-center">
-                            <Image src="/Logo.jpeg" width={32} height={32} alt="FlowBite Logo" className="mr-3 h-8" />
+                            <Image src="/Logo.jpeg" width={32} height={32} alt="CYC Logo" className="mr-3 h-8" />
                             <span className="self-center text-2xl font-semibold whitespace-nowrap">CYC Dallas Chapter</span>
                         </div>
                     </div>
