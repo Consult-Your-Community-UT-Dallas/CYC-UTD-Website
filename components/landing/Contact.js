@@ -8,16 +8,14 @@ function Contact() {
         event.preventDefault();
 
         try {
-            const response = await fetch("/api/submit", {
+            const formData = new FormData();
+            formData.append("email", event.target.email.value);
+            formData.append("subject", event.target.subject.value);
+            formData.append("message", event.target.message.value);
+
+            const response = await fetch("/api/contact-form", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email: event.target.email.value,
-                    subject: event.target.subject.value,
-                    message: event.target.message.value,
-                }),
+                body: formData,
             });
 
             if (!response.ok) {
@@ -26,8 +24,7 @@ function Contact() {
 
             toast.success("Message sent!", { position: "bottom-right" });
         } catch (error) {
-            console.log(error);
-            toast.error("Feature under development", { position: "bottom-right" });
+            toast.error("An error occurred", { position: "bottom-right" });
         }
     };
 
@@ -77,6 +74,7 @@ function Contact() {
                         rows="6"
                         className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                         placeholder="Leave a comment..."
+                        required
                     />
                 </div>
                 <button
