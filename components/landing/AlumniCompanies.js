@@ -6,7 +6,7 @@ import { companies } from "@/data/AlumniCompanies";
 function AlumniCompanyCard({ name, logo }) {
     return (
         <div className="flex justify-center items-center">
-            <Image src={logo} alt={name} width={200} height={200} />
+            <Image src={logo} alt={name} width={200} height={200} priority={true} placeholder="empty" />
         </div>
     );
 }
