@@ -1,12 +1,19 @@
 import os
 from typing import Annotated
 
-from fastapi import FastAPI, Form, HTTPException, Depends
+from fastapi import FastAPI, Form, HTTPException, Request
 from pydantic import BaseModel
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
+from slowapi.errors import RateLimitExceeded
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+
+limiter = Limiter(key_func=get_remote_address)
 app = FastAPI()
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 CONTACT_FORM_RECIPIENT = "utdallas@consultyourcommunity.org"
@@ -22,7 +29,7 @@ Message: {}<br>
 """
 
 confirmation_email_content = """
-Thank you for contacting CYC UT Dallas. We have received your message and will get back to you shortly.<br>
+Thank you for contacting CYC UT Dallas. We have received your message and will get back to you as soon as possible.<br>
 <br>
 Best regards,<br>
 CYC Team
@@ -55,7 +62,8 @@ def hello_world():
 
 
 @app.post("/api/contact-form")
-async def contact_form(email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()]):
+@limiter.limit("1/minute")
+async def contact_form(email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()], request: Request):
     try:
         send_email(
             recipient=CONTACT_FORM_RECIPIENT,
