@@ -57,17 +57,14 @@ def hello_world():
 @app.post("/api/contact-form")
 async def contact_form(email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()]):
     try:
-        # Send inquiry email
         send_email(
             recipient=CONTACT_FORM_RECIPIENT,
             subject="New Inquiry from CYC Website",
             content=email_template.format(email, subject, message)
         )
-        
-        # Send confirmation email
         send_email(
             recipient=email,
-            subject="Thank you for your inquiry",
+            subject="Thank you for contacting CYC UT Dallas",
             content=confirmation_email_content
         )
         
