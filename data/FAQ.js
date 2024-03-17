@@ -6,7 +6,7 @@ export const questionsLeftColumn = [
 
     {
         question: "What does CYC look for in an applicant?",
-        answer: "CYC believes that the best applicants aren’t necessarily the ones with an inherent business acumen, but instead, display a commitment to pro-bono, impactful work while simultaneously showing willingness to learn more. More specifically, the main traits we look for are collaborative efforts, enthusiasm, and intellectual curiosity.",
+        answer: "CYC believes that the best applicants aren't necessarily the ones with an inherent business acumen, but instead, display a commitment to pro-bono, impactful work while simultaneously showing willingness to learn more. More specifically, the main traits we look for are collaborative efforts, enthusiasm, and intellectual curiosity.",
     },
     {
         question: "How can I prepare before submitting my application?",
