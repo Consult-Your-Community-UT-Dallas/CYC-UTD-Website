@@ -9,7 +9,7 @@ function page() {
             <Hero />
             <TeamDisplay
                 title="Executive Board"
-                description="Responsible for the overall management and direction of the organization. They are responsible for the strategic direction of the organization and the day-to-day operations."
+                description="Responsible for managing and directing both strategic and daily operations of the organization."
                 teamArray={executives}
             />
             <TeamDisplay

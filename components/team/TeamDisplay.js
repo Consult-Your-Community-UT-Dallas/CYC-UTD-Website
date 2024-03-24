@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-function Member({ name, position, linkedin, major, gradYear, email }) {
+function Profile({ name, position, linkedin, major, gradYear, email }) {
     return (
         <div className="text-center text-gray-500">
             <Image
@@ -23,7 +23,7 @@ function Member({ name, position, linkedin, major, gradYear, email }) {
             <p>
                 {major} {gradYear}
             </p>
-            <a href={`mailto:${email}`} className="text-primary-500 hover:underline">
+            <a href={`mailto:${email}`} className="text-primary-600 hover:underline">
                 Email
             </a>
         </div>
@@ -39,7 +39,7 @@ function TeamDisplay({ title, description, teamArray }) {
             </div>
             <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {teamArray.map((member, idx) => (
-                    <Member key={idx} {...member} />
+                    <Profile key={idx} {...member} />
                 ))}
             </div>
         </div>

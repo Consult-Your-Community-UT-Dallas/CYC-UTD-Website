@@ -13,12 +13,12 @@ const links = [
         href: "/#team",
     },
     {
-        title: "FAQ",
-        href: "/#faq",
-    },
-    {
         title: "Contact",
         href: "/#contact",
+    },
+    {
+        title: "FAQ",
+        href: "/#faq",
     },
 ];
 

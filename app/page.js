@@ -15,9 +15,9 @@ export default function Home() {
             <SocialProof />
             <Testimonials />
             <AlumniCompanies />
-            <FAQ />
-            <CallToAction />
             <Contact />
+            <CallToAction />
+            <FAQ />
         </>
     );
 }
