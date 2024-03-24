@@ -47,6 +47,7 @@ export const footerLinks = [
 
 export const socials = [
     {
+        platform: "Facebook",
         href: facebook,
         icon: (
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -59,6 +60,7 @@ export const socials = [
         ),
     },
     {
+        platform: "Instagram",
         href: instagram,
         icon: (
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -71,6 +73,7 @@ export const socials = [
         ),
     },
     {
+        platform: "Twitter",
         href: twitter,
         icon: (
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -79,6 +82,7 @@ export const socials = [
         ),
     },
     {
+        platform: "LinkedIn",
         href: linkedin,
         icon: (
             <svg className="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -87,6 +91,7 @@ export const socials = [
         ),
     },
     {
+        platform: "GitHub",
         href: github,
         icon: (
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -99,6 +104,7 @@ export const socials = [
         ),
     },
     {
+        platform: "Email",
         href: discord,
         icon: (
             <svg className="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">

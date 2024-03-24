@@ -20,9 +20,9 @@ function FooterCard({ title, links }) {
     );
 }
 
-function SocialIcons({ href, children }) {
+function SocialIcons({ platform, href, children }) {
     return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900">
+        <a href={href} alt={platform} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-900">
             {children}
         </a>
     );
@@ -57,7 +57,7 @@ function Footer() {
                     </span>
                     <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                         {socials.map((social, index) => (
-                            <SocialIcons key={index} href={social.href}>
+                            <SocialIcons key={index} platform={social.platform} href={social.href}>
                                 {social.icon}
                             </SocialIcons>
                         ))}

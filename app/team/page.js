@@ -1,7 +1,7 @@
 import Hero from "@/components/team/Hero";
 import TeamDisplay from "@/components/team/TeamDisplay";
-import { consultantTeam } from "@/data/ConsultantTeam";
-import { execTeam } from "@/data/ExecTeam";
+import { consultants } from "@/data/Consultants";
+import { executives } from "@/data/Executives";
 
 function page() {
     return (
@@ -10,12 +10,12 @@ function page() {
             <TeamDisplay
                 title="Executive Board"
                 description="Responsible for the overall management and direction of the organization. They are responsible for the strategic direction of the organization and the day-to-day operations."
-                teamArray={execTeam}
+                teamArray={executives}
             />
             <TeamDisplay
                 title="Consultants"
                 description="Highly motivated and talented students from various majors and backgrounds, dedicated to providing the best consulting services to our clients."
-                teamArray={consultantTeam}
+                teamArray={consultants.sort((a, b) => a.name.localeCompare(b.name))}
             />
         </>
     );

@@ -14,13 +14,13 @@ function Member({ name, position, linkedin, major, gradYear, email }) {
                 priority={false}
                 placeholder="empty"
             />
-            <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+            <h3 className="text-2xl font-bold tracking-tight text-gray-900">
                 <a href={linkedin} target="_blank" rel="noreferrer" className="hover:underline">
                     {name}
                 </a>
             </h3>
             {position && <p>{position}</p>}
-            <p className="pb-1">
+            <p>
                 {major} {gradYear}
             </p>
             <a href={`mailto:${email}`} className="text-primary-500 hover:underline">
@@ -38,11 +38,9 @@ function TeamDisplay({ title, description, teamArray }) {
                 <p className="font-light text-gray-500 sm:text-xl">{description}</p>
             </div>
             <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {teamArray
-                    .sort((a, b) => a.name.localeCompare(b.name))
-                    .map((member, idx) => (
-                        <Member key={idx} {...member} />
-                    ))}
+                {teamArray.map((member, idx) => (
+                    <Member key={idx} {...member} />
+                ))}
             </div>
         </div>
     );

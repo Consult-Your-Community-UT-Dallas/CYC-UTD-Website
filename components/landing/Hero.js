@@ -23,7 +23,7 @@ function Hero() {
     }, []);
 
     return (
-        <section id="#" className="bg-[url('/HeroImage.jpg')] bg-center bg-cover pt-28 pb-12 md:pt-44 md:pb-20">
+        <section id="#" className="bg-[url('/Hero.webp')] bg-center bg-cover pt-28 pb-12 md:pt-44 md:pb-20">
             <div className="max-w-screen-xl px-4 py-8 mx-auto flex flex-col md:items-center text-center text-white">
                 <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight">Consult Your Community</h1>
                 <p className="max-w-2xl mb-4 font-light md:text-lg lg:text-xl">

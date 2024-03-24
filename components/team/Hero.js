@@ -2,7 +2,7 @@
 
 function Hero() {
     return (
-        <section className="bg-[url('/TeamPageHero.jpg')] bg-center bg-cover bg-opacity-40 pt-28 pb-12 md:pt-44 md:pb-20">
+        <section className="bg-[url('/TeamPicture.webp')] bg-center bg-cover bg-opacity-40 pt-28 pb-12 md:pt-44 md:pb-20">
             <div className="max-w-screen-xl px-4 py-8 mx-auto flex flex-col md:items-center text-center text-white">
                 <h1 className="max-w-2xl mb-4 text-5xl font-extrabold tracking-tight leading-none">Meet The Team</h1>
                 <p className="max-w-2xl mb-4 font-light md:text-lg lg:text-xl">

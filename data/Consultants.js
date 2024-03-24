@@ -1,4 +1,6 @@
-export const consultantTeam = [
+// This array will be sorted alphabetically when used, no need to sort it here.
+
+export const consultants = [
     {
         name: "Aryan Neeli",
         linkedin: "https://www.linkedin.com/in/aryan-n-03747b223/",
@@ -40,6 +42,13 @@ export const consultantTeam = [
         major: "Computer Science",
         gradYear: "'25",
         email: "giridhar.nair@consultyourcommunity.org",
+    },
+    {
+        name: "Meena Bhattar",
+        linkedin: "https://www.linkedin.com/",
+        major: "Economics",
+        gradYear: "'25",
+        email: "Meena.Bhattar@consultyourcommunity.org",
     },
     {
         name: "Muskan Dolani",
