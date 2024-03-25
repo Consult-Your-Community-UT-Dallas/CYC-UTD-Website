@@ -10,7 +10,6 @@ export const testimonials = [
                 <p className="my-4">I highly recommend CYC for their innovative solutions and collaborative approach. Huge thanks!&quot;</p>
             </>
         ),
-        avatar: "/Testimonials/ChandlerTang.jpeg",
         linkedInProfile: "https://www.linkedin.com/in/chandler-tang-1a63a7aa/",
         name: "Chandler Tang",
         position: "Founder of post.script.",
@@ -26,7 +25,6 @@ export const testimonials = [
                 <p className="my-4">Now, with three websites and a growing membership, my dream has become a reality. Grateful for the support!&quot;</p>
             </>
         ),
-        avatar: "/Testimonials/JillianLivingston.jpeg",
         linkedInProfile: "https://www.linkedin.com/in/jillianlivingston/",
         name: "Jillian Livingston",
         position: "Executive Director / Founder of Aspen's Professional Social Club & Global Travel Writer",
@@ -44,7 +42,6 @@ export const testimonials = [
                 </p>
             </>
         ),
-        avatar: "/Testimonials/LaurieLemieux.png",
         linkedInProfile: "https://www.linkedin.com/in/laurie-lemieux-202811126/",
         name: "Laurie Lemieux",
         position: "President at Proteus Bicycles",
@@ -63,7 +60,6 @@ export const testimonials = [
                 </p>
             </>
         ),
-        avatar: "/Testimonials/AnneChen.jpeg",
         linkedInProfile: "https://www.linkedin.com/in/annevirginiachen/",
         name: "Anne Virginia Chen",
         position: "Former Consultant at CYC Columbia",

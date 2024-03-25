@@ -9,6 +9,7 @@ function Contact() {
 
         try {
             const formData = new FormData();
+            formData.append("api_key", process.env.NEXT_PUBLIC_API_KEY);
             formData.append("email", event.target.email.value);
             formData.append("subject", event.target.subject.value);
             formData.append("message", event.target.message.value);

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { testimonials } from "@/data/Testimonials";
 
-function TestimonialCard({ title, quote, avatar, linkedInProfile, name, position }) {
+function TestimonialCard({ title, quote, linkedInProfile, name, position }) {
     return (
         <figure className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r">
             <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500">
@@ -11,7 +11,13 @@ function TestimonialCard({ title, quote, avatar, linkedInProfile, name, position
                 {quote}
             </blockquote>
             <figcaption className="flex justify-center items-center space-x-3">
-                <Image className="w-9 h-9 rounded-full" src={avatar} alt="profile picture" width={100} height={100} />
+                <Image
+                    className="w-9 h-9 rounded-full"
+                    src={`/Testimonials/${name.split(" ")[0]}${name.split(" ")[name.split(" ").length - 1]}.jpeg`}
+                    alt={`${name} Profile Picture`}
+                    width={100}
+                    height={100}
+                />
                 <div className="space-y-0.5 font-medium text-left">
                     <a href={linkedInProfile} target="_blank" rel="noreferrer" className="text-gray-900 hover:underline">
                         {name}

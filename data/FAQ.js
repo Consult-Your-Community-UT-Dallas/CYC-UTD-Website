@@ -1,4 +1,4 @@
-export const questionsLeftColumn = [
+export const faqLeftColumn = [
     {
         question: "What makes CYC different from other Consulting Clubs?",
         answer: "What sets CYC UTD apart is its focus on pro-bono consulting for local, minority-owned businesses. Our diverse projects, spanning financial modeling to UI/UX design, provide Analysts with a chance to make a tangible impact on community issues while honing a wide range of skills, making CYC unique and impactful for both members and businesses.",
@@ -14,7 +14,7 @@ export const questionsLeftColumn = [
     },
 ];
 
-export const questionsRightColumn = [
+export const faqRightColumn = [
     {
         question: "What major should I be to join CYC?",
         answer: "CYC prides itself on the diverse interests and skills of our members, and we believe that the best consultants are ones that can leverage their skills— regardless of what they are— to drive impact. Majors are not considered when selecting applicants, and CYC highly encourages students to apply regardless of what they are currently studying.",

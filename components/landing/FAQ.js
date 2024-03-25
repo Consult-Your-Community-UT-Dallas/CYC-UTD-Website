@@ -1,6 +1,6 @@
 "use client";
 
-import { questionsLeftColumn, questionsRightColumn } from "@/data/FAQ";
+import { faqLeftColumn, faqRightColumn } from "@/data/FAQ";
 
 function QuestionCard({ question, answer }) {
     return (
@@ -26,12 +26,12 @@ function FAQ() {
             <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900">Frequently asked questions</h2>
             <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 md:grid-cols-2">
                 <div>
-                    {questionsLeftColumn.map((question, index) => (
+                    {faqLeftColumn.map((question, index) => (
                         <QuestionCard key={index} question={question.question} answer={question.answer} />
                     ))}
                 </div>
                 <div>
-                    {questionsRightColumn.map((question, index) => (
+                    {faqRightColumn.map((question, index) => (
                         <QuestionCard key={index} question={question.question} answer={question.answer} />
                     ))}
                 </div>

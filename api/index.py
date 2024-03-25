@@ -16,10 +16,17 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-CONTACT_FORM_RECIPIENT = "utdallas@consultyourcommunity.org"
+if not SENDGRID_API_KEY:
+    raise Exception("SENDGRID_API_KEY is not set in environment variables")
+
+NEXT_PUBLIC_API_KEY = os.getenv('NEXT_PUBLIC_API_KEY')
+if not NEXT_PUBLIC_API_KEY:
+    raise Exception("NEXT_PUBLIC_API_KEY is not set in environment variables")
+
+CONTACT_FORM_RECIPIENT = "giridhar.r.nair@gmail.com"
 
 email_template = """
-You've received a new inquiry via our website's contact form. Below are the details:<br>
+Someone has filled out the contact form on the CYC UT Dallas website. Here are the details:<br>
 <br>
 Email: {}<br>
 <br>
@@ -29,10 +36,10 @@ Message: {}<br>
 """
 
 confirmation_email_content = """
-Thank you for contacting CYC UT Dallas. We have received your message and will get back to you as soon as possible.<br>
+Thank you for contacting Consult Your Community UT Dallas. We have received your message and will get back to you as soon as possible.<br>
 <br>
 Best regards,<br>
-CYC Team
+Consult Your Community UT Dallas Team
 """
 
 
@@ -63,7 +70,10 @@ def hello_world():
 
 @app.post("/api/contact-form")
 @limiter.limit("1/minute")
-async def contact_form(email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()], request: Request):
+async def contact_form(api_key: Annotated[str, Form()], email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()], request: Request):
+    if api_key != NEXT_PUBLIC_API_KEY:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
     try:
         send_email(
             recipient=CONTACT_FORM_RECIPIENT,
