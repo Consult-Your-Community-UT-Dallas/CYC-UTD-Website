@@ -19,10 +19,6 @@ SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 if not SENDGRID_API_KEY:
     raise Exception("SENDGRID_API_KEY is not set in environment variables")
 
-NEXT_PUBLIC_API_KEY = os.getenv('NEXT_PUBLIC_API_KEY')
-if not NEXT_PUBLIC_API_KEY:
-    raise Exception("NEXT_PUBLIC_API_KEY is not set in environment variables")
-
 CONTACT_FORM_RECIPIENT = "giridhar.r.nair@gmail.com"
 
 email_template = """
@@ -70,10 +66,7 @@ def hello_world():
 
 @app.post("/api/contact-form")
 @limiter.limit("1/minute")
-async def contact_form(api_key: Annotated[str, Form()], email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()], request: Request):
-    if api_key != NEXT_PUBLIC_API_KEY:
-        raise HTTPException(status_code=401, detail="Unauthorized")
-
+async def contact_form(email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()], request: Request):
     try:
         send_email(
             recipient=CONTACT_FORM_RECIPIENT,
