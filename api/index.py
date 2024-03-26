@@ -19,7 +19,7 @@ SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 if not SENDGRID_API_KEY:
     raise Exception("SENDGRID_API_KEY is not set in environment variables")
 
-CONTACT_FORM_RECIPIENT = "giridhar.r.nair@gmail.com"
+CYC_EMAIL = "utdallas@consultyourcommunity.org"
 
 email_template = """
 Someone has filled out the contact form on the CYC UT Dallas website. Here are the details:<br>
@@ -69,14 +69,14 @@ def hello_world():
 async def contact_form(email: Annotated[str, Form()], subject: Annotated[str, Form()], message: Annotated[str, Form()], request: Request):
     try:
         send_email(
-            recipient=CONTACT_FORM_RECIPIENT,
-            subject="New Inquiry from CYC Website",
-            content=email_template.format(email, subject, message)
-        )
-        send_email(
             recipient=email,
             subject="Thank you for contacting CYC UT Dallas",
             content=confirmation_email_content
+        )
+        send_email(
+            recipient=CYC_EMAIL,
+            subject="New Inquiry from CYC Website",
+            content=email_template.format(email, subject, message)
         )
         
         return {"message": "Emails sent successfully"}

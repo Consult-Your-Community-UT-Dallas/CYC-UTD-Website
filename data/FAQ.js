@@ -10,7 +10,7 @@ export const faqLeftColumn = [
     },
     {
         question: "How can I prepare before submitting my application?",
-        answer: "For the best chance, ensure your resume is comprehensive. Consider using our template and Harvard Business School guide. If applicable, use the optional section to explain extenuating circumstances. We prioritize an equitable recruitment process. Attend our info sessions and coffee chats before submitting your application for a better understanding.",
+        answer: "To maximize your success, craft a comprehensive resume that effectively showcases your qualifications. Utilize optional sections to provide context for any extenuating circumstances. We prioritize equity in our recruitment process, ensuring equal opportunities for all candidates. Consider attending our informational sessions and coffee chats to gain a deeper understanding of our organization and how to tailor your application effectively.",
     },
 ];
 
@@ -21,10 +21,10 @@ export const faqRightColumn = [
     },
     {
         question: "What time commitment is expected from members?",
-        answer: "CYC's New Members undergo weekly New Member Education (NME) training, lasting 1-2 hours. Alongside this, they dedicate around four extra hours for general meets, project team meetings, assignments, and socials. CYC recommends a minimum commitment of six hours per week for optimal engagement.",
+        answer: "CYC's New Members undergo weekly New Member Education (NME) training, lasting 1-2 hours. Alongside this, they dedicate around four extra hours for general meets, project team meetings, assignments, and socials. CYC recommends a minimum commitment of 6 hours per week for optimal engagement.",
     },
     {
         question: "How can I prepare going into my interview?",
-        answer: "Prepare for CYC interview with major-specific knowledge. Expect technical questions for CS majors and business frameworks for business majors. Initial group case interview focuses on collaboration. Final round highlights personal passions and commitment to empowering underserved communities.",
+        answer: "Prepare for your CYC interview by familiarizing yourself with major-specific knowledge. For instance, computer science majors can anticipate technical questions, while business majors may encounter case studies. The initial group case interview emphasizes collaboration and problem-solving skills. The final interview comprises a behavioral assessment conducted by a current CYC member. Be ready to delve into your resume and share relevant experiences.",
     },
 ];

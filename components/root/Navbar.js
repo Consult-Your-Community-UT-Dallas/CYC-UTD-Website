@@ -43,7 +43,7 @@ function Navbar() {
         <header>
             <nav className="bg-white border-b-2 border-gray-100 px-4 lg:px-6 py-2.5 fixed w-full z-10">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <a href="/#" className="flex items-center">
+                    <a href="/#" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
                         <Image src="/Logo.jpeg" width={32} height={32} alt="CYC UTD Logo" className="mr-3 h-8" />
                         <span className="self-center text-xl font-semibold whitespace-nowrap text-gray-700 lg:hover:text-primary-700">CYC UT Dallas</span>
                     </a>
